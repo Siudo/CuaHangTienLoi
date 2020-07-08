@@ -35,6 +35,8 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -42,6 +44,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.guna2Button3);
+            this.panel1.Controls.Add(this.guna2Button2);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -59,7 +63,7 @@
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(0, 167);
@@ -67,7 +71,7 @@
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(204, 45);
             this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "guna2Button1";
+            this.guna2Button1.Text = "QUẢN LÝ HÀNG HOÁ";
             // 
             // panel2
             // 
@@ -110,6 +114,44 @@
             this.pnMain.Size = new System.Drawing.Size(1081, 645);
             this.pnMain.TabIndex = 2;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.BorderThickness = 1;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button2.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(0, 212);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(204, 45);
+            this.guna2Button2.TabIndex = 2;
+            this.guna2Button2.Text = "QUẢN LÝ NHÂN VIÊN";
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.Animated = true;
+            this.guna2Button3.BorderRadius = 10;
+            this.guna2Button3.BorderThickness = 1;
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button3.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Location = new System.Drawing.Point(0, 257);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(204, 45);
+            this.guna2Button3.TabIndex = 3;
+            this.guna2Button3.Text = "QUẢN LÝ KHÁCH HÀNG";
+            // 
             // frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,5 +179,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnMain;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

@@ -29,6 +29,7 @@ namespace CuaHangTienLoi
                 cbLoaiSP.ValueMember = "MALOAI";
                 List<DGVHANGHOA_Result> ds_hanghoa = db.DGVHANGHOA().ToList();
                 DataTable dt = new DataTable();
+                dt.Columns.Add("mahang");
                 dt.Columns.Add("tenhang");
                 dt.Columns.Add("hsd");
                 dt.Columns.Add("donvitinh");
@@ -39,7 +40,7 @@ namespace CuaHangTienLoi
                 foreach(DGVHANGHOA_Result item in ds_hanghoa)
                 {
                     DateTime hsd =(DateTime) item.HSD;
-                    dt.Rows.Add(item.TENHANG, hsd.ToString("yyyy-MM-dd"), item.DONVITINH, item.SOLUONG, item.TENLOAI, item.Hinh, item.GIABAN);
+                    dt.Rows.Add(item.MAHANG,item.TENHANG, hsd.ToString("yyyy-MM-dd"), item.DONVITINH, item.SOLUONG, item.TENLOAI, item.Hinh, item.GIABAN);
                 }
                 
                 dgvHangHoa.DataSource = dt;
@@ -60,7 +61,7 @@ namespace CuaHangTienLoi
                 FileStream fs = new FileStream(imgSP, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
-                HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.TENHANG == txtTenhang.Text  );
+                HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.MAHANG.ToString() == txtMaHang.Text);
                 hh.TENHANG = txtTenhang.Text;
                 hh.SOLUONG = int.Parse(txtSL.Text);
                 hh.HSD = DateTime.Parse(txtHSD.Text);
@@ -86,25 +87,48 @@ namespace CuaHangTienLoi
 
         private void dgvHangHoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtMaHang.Text = dgvHangHoa.CurrentRow.Cells["mahang"].Value.ToString();
             txtTenhang.Text = dgvHangHoa.CurrentRow.Cells["tenhang"].Value.ToString();
             txtSL.Text = dgvHangHoa.CurrentRow.Cells["soluong"].Value.ToString();
             txtHSD.Text = dgvHangHoa.CurrentRow.Cells["hsd"].Value.ToString();
             txtGiaBan.Text = dgvHangHoa.CurrentRow.Cells["giaban"].Value.ToString();
             txtDVT.Text = dgvHangHoa.CurrentRow.Cells["donvitinh"].Value.ToString();
             cbLoaiSP.Text = dgvHangHoa.CurrentRow.Cells["loaihang"].Value.ToString();
-            //fix
-            byte[] img = Encoding.ASCII.GetBytes(dgvHangHoa.CurrentRow.Cells["hinh"].Value.ToString());
-            if(img == null)
+            using (CUAHANGTIENLOI db = new CUAHANGTIENLOI())
             {
-                picSP.Image = null;
+                DGVHANGHOA_Result s = db.DGVHANGHOA().Where(p=> p.MAHANG == int.Parse(txtMaHang.Text)).FirstOrDefault();
+                if (s == null || s.Hinh == null) picSP.Image = null;
+                else
+                {
+                    MemoryStream stream = new MemoryStream(s.Hinh.ToArray());
+                    Image im = Image.FromStream(stream);
+                    if (im == null) return;
+                    else
+                    {
+                        picSP.Image = im;
+                    }
+                }
             }
-            else
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+            frm_NhapHang nhaphang = new frm_NhapHang();
+            nhaphang.Visible = true;
+            loadDL();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            using(CUAHANGTIENLOI db = new CUAHANGTIENLOI())
             {
-                MemoryStream ms = new MemoryStream(img);
-                Image im = Image.FromStream(ms);
-                picSP.Image = im;
+                HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.MAHANG.ToString() == txtMaHang.Text);
+                db.HANGHOAs.Remove(hh);
+                db.SaveChanges();
             }
-            
+            loadDL();
         }
     }
 }

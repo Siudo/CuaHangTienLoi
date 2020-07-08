@@ -27,7 +27,7 @@ namespace CuaHangTienLoi
         public string SDT { get; set; }
         public Nullable<decimal> LUONG { get; set; }
         public Nullable<int> MACV { get; set; }
-        public string TENTK { get; set; }
+        public Nullable<int> MATK { get; set; }
     
         public virtual CHUCVU CHUCVU { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

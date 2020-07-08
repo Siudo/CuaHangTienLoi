@@ -11,15 +11,14 @@ namespace CuaHangTienLoi
 {
     using System;
     
-    public partial class DGVHANGHOA_Result
+    public partial class DANHSACHNV_Result
     {
-        public int MAHANG { get; set; }
-        public string TENHANG { get; set; }
-        public Nullable<System.DateTime> HSD { get; set; }
-        public string DONVITINH { get; set; }
-        public Nullable<int> SOLUONG { get; set; }
-        public string TENLOAI { get; set; }
-        public byte[] Hinh { get; set; }
-        public Nullable<decimal> GIABAN { get; set; }
+        public int MANV { get; set; }
+        public string TENNV { get; set; }
+        public string GMAIL { get; set; }
+        public string SDT { get; set; }
+        public Nullable<decimal> LUONG { get; set; }
+        public string TENCV { get; set; }
+        public string TENTK { get; set; }
     }
 }

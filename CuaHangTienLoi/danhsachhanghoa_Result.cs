@@ -11,7 +11,7 @@ namespace CuaHangTienLoi
 {
     using System;
     
-    public partial class DGVHANGHOA_Result
+    public partial class danhsachhanghoa_Result
     {
         public int MAHANG { get; set; }
         public string TENHANG { get; set; }

@@ -40,9 +40,39 @@ namespace CuaHangTienLoi
         public virtual DbSet<QUYEN> QUYENs { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
     
+        public virtual ObjectResult<DANHSACHNV_Result> DANHSACHNV()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DANHSACHNV_Result>("DANHSACHNV");
+        }
+    
         public virtual ObjectResult<DGVHANGHOA_Result> DGVHANGHOA()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DGVHANGHOA_Result>("DGVHANGHOA");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> LAYMAHANG()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LAYMAHANG");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> LAYMAPN()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LAYMAPN");
+        }
+    
+        public virtual ObjectResult<DANHSACHHOADON_Result> DANHSACHHOADON()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DANHSACHHOADON_Result>("DANHSACHHOADON");
+        }
+    
+        public virtual ObjectResult<danhsachhanghoa_Result> danhsachhanghoa()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<danhsachhanghoa_Result>("danhsachhanghoa");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> LAYMAHD()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LAYMAHD");
         }
     }
 }

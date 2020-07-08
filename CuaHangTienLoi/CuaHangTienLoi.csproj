@@ -42,6 +42,7 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI2_WinFroms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -67,8 +68,29 @@
     <Compile Include="CTPHIEUNHAP.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="danhsachhanghoa_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DANHSACHHOADON_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DANHSACHNV_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DGVHANGHOA_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GuiMailNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GuiMailNCC.Designer.cs">
+      <DependentUpon>frm_GuiMailNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HoaDon.Designer.cs">
+      <DependentUpon>frm_HoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
@@ -82,11 +104,41 @@
     <Compile Include="frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_NhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhapHang.Designer.cs">
+      <DependentUpon>frm_NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QLKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QLKH.Designer.cs">
+      <DependentUpon>frm_QLKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QLNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QLNCC.Designer.cs">
+      <DependentUpon>frm_QLNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QLNV.Designer.cs">
+      <DependentUpon>frm_QLNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_QuanLyHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_QuanLyHangHoa.Designer.cs">
       <DependentUpon>frm_QuanLyHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemHD.Designer.cs">
+      <DependentUpon>frm_ThemHD.cs</DependentUpon>
     </Compile>
     <Compile Include="HANGHOA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -132,14 +184,35 @@
     <Compile Include="TAIKHOAN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_GuiMailNCC.resx">
+      <DependentUpon>frm_GuiMailNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HoaDon.resx">
+      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Menu.resx">
       <DependentUpon>frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhapHang.resx">
+      <DependentUpon>frm_NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QLKH.resx">
+      <DependentUpon>frm_QLKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QLNCC.resx">
+      <DependentUpon>frm_QLNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QLNV.resx">
+      <DependentUpon>frm_QLNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_QuanLyHangHoa.resx">
       <DependentUpon>frm_QuanLyHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemHD.resx">
+      <DependentUpon>frm_ThemHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,19 +245,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

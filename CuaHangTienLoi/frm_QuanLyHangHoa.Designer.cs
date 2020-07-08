@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.picSP = new System.Windows.Forms.PictureBox();
             this.txtTenhang = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.btnChonHinh = new Guna.UI2.WinForms.Guna2Button();
             this.ofdChonHinh = new System.Windows.Forms.OpenFileDialog();
             this.dgvHangHoa = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.mahang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hsd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donvitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +58,8 @@
             this.loaihang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtMaHang = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +79,7 @@
             this.btnThem.Size = new System.Drawing.Size(137, 45);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -94,21 +98,22 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // guna2Button3
+            // btnXoa
             // 
-            this.guna2Button3.BorderRadius = 15;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.Black;
-            this.guna2Button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(864, 270);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(137, 45);
-            this.guna2Button3.TabIndex = 3;
-            this.guna2Button3.Text = "Xoá";
+            this.btnXoa.BorderRadius = 15;
+            this.btnXoa.CheckedState.Parent = this.btnXoa;
+            this.btnXoa.CustomImages.Parent = this.btnXoa;
+            this.btnXoa.FillColor = System.Drawing.Color.Black;
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.HoverState.Parent = this.btnXoa;
+            this.btnXoa.Location = new System.Drawing.Point(864, 270);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
+            this.btnXoa.Size = new System.Drawing.Size(137, 45);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // picSP
             // 
@@ -367,8 +372,9 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHangHoa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHangHoa.ColumnHeadersHeight = 20;
             this.dgvHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mahang,
             this.tenhang,
             this.hsd,
             this.donvitinh,
@@ -405,7 +411,7 @@
             this.dgvHangHoa.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvHangHoa.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvHangHoa.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvHangHoa.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHangHoa.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvHangHoa.ThemeStyle.HeaderStyle.Height = 20;
             this.dgvHangHoa.ThemeStyle.ReadOnly = false;
             this.dgvHangHoa.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -416,6 +422,12 @@
             this.dgvHangHoa.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHangHoa.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvHangHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangHoa_CellClick);
+            // 
+            // mahang
+            // 
+            this.mahang.DataPropertyName = "mahang";
+            this.mahang.HeaderText = "Mã hàng";
+            this.mahang.Name = "mahang";
             // 
             // tenhang
             // 
@@ -459,12 +471,50 @@
             this.giaban.HeaderText = "Giá bán";
             this.giaban.Name = "giaban";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(346, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 16);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Mã hàng :";
+            // 
+            // txtMaHang
+            // 
+            this.txtMaHang.BorderRadius = 20;
+            this.txtMaHang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaHang.DefaultText = "";
+            this.txtMaHang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaHang.DisabledState.Parent = this.txtMaHang;
+            this.txtMaHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaHang.FocusedState.Parent = this.txtMaHang;
+            this.txtMaHang.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.txtMaHang.ForeColor = System.Drawing.Color.Black;
+            this.txtMaHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaHang.HoverState.Parent = this.txtMaHang;
+            this.txtMaHang.Location = new System.Drawing.Point(438, 15);
+            this.txtMaHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaHang.Name = "txtMaHang";
+            this.txtMaHang.PasswordChar = '\0';
+            this.txtMaHang.PlaceholderText = "";
+            this.txtMaHang.SelectedText = "";
+            this.txtMaHang.ShadowDecoration.Parent = this.txtMaHang;
+            this.txtMaHang.Size = new System.Drawing.Size(49, 40);
+            this.txtMaHang.TabIndex = 19;
+            // 
             // frm_QuanLyHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1081, 645);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtMaHang);
             this.Controls.Add(this.dgvHangHoa);
             this.Controls.Add(this.btnChonHinh);
             this.Controls.Add(this.cbLoaiSP);
@@ -480,7 +530,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTenhang);
             this.Controls.Add(this.picSP);
-            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -497,7 +547,7 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2Button btnSua;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnXoa;
         private System.Windows.Forms.PictureBox picSP;
         private Guna.UI2.WinForms.Guna2TextBox txtTenhang;
         private System.Windows.Forms.Label label1;
@@ -514,6 +564,7 @@
         private Guna.UI2.WinForms.Guna2Button btnChonHinh;
         private System.Windows.Forms.OpenFileDialog ofdChonHinh;
         private Guna.UI2.WinForms.Guna2DataGridView dgvHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mahang;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn hsd;
         private System.Windows.Forms.DataGridViewTextBoxColumn donvitinh;
@@ -521,5 +572,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn loaihang;
         private System.Windows.Forms.DataGridViewTextBoxColumn hinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaHang;
     }
 }

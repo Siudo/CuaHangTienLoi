@@ -20,6 +20,7 @@ namespace CuaHangTienLoi
             this.NHANVIENs = new HashSet<NHANVIEN>();
         }
     
+        public int MATK { get; set; }
         public string TENTK { get; set; }
         public string MK { get; set; }
     
