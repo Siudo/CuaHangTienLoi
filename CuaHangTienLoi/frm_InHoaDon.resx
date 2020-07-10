@@ -117,23 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnTimKiem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAK3SURBVGhD7ZjLThRBFIYHtxiXbFhwiVGXIGElGp+BaIL6EKIu3HHZ+SZc9BUQF8StO0R8AqIr
-        cKGJyfj9U2cqNUUPzHRXDY3pL/mToU/Vf04x09WnutXQ0DA87Xb7PtpE++gr+mXS549oA83b8HpAQWPo
-        CTpCg6IFLaMxs7kaKGAGfUZlOUBTZjdaSPwAnaiKivxEj812NJDwEfqj7BG/0RZaQXfRuEmfdW0b9Zu3
-        ZPZ5IZF+Nj+UNWIHTduwvjBG83c1IULf5qXzK0EC3bDxb/4vemlDBoY5qzY35MDCeSDBU5enh6GL78Lc
-        186ih2ULpwVj/ffjrXLHwqXB472z8hxaKC0YLzh/j27GWQuXBo9ppJs4ZM7C6cBUT9iQLQtVBi9tACHr
-        FkoHpmoPQlYsVBm8njtLz56F0oHpsfP23LZQZfDScyLkyELpwPTMeXtuWqgy8nKWnjMLpQPTU+ftSbmA
-        W87Sc2qhdGD6zXl77lioMnjdc5aeYwulA1P18yHPLFQZvF44S8++hdKBqQ4jIdsWqgxe8Ta6ZqF0YDrv
-        vD16kM1YuDR4zJpXyKKF04GpWgmdpEJ2LVwaPD44K88XlOekhrGOgTGrFh4a5r5xFj3kaeYE5voWdAwM
-        UUv8yoYMDHPUicbttDaKGzYkDySYQkVHSXWVlzZ3GoPin43Q0XLShuWFRA9R3EEK3YzaUdTbaG/XE1bS
-        Z11TrOhIKdSqT1iK/JBsCaU61Be9ktmwVPkgiXr5+J4YBv3mJ9FE56/z5F+EIJF2p8NOysHQVqk5/obt
-        XC1mNIsQJJtD62gP6ZmhDlavFr+jT2gNLaJz+zzXLmJ0iygLRb51tfblnQ2tLxTZLKIWUGSziFpAkc0i
-        agFF/veLSP8mLwcUWrSI61F8FwoOF3G9iu9C4XpDUv/+qKHhymi1/gFZN28rCAPYTgAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
+  <metadata name="rpt_Hoadon1BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>379, 17</value>
+  </metadata>
+  <metadata name="DataHoaDon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>257, 17</value>
+  </metadata>
+  <metadata name="DataHoaDon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>257, 17</value>
+  </metadata>
+  <metadata name="rpt_Hoadon1TableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>581, 17</value>
+  </metadata>
 </root>

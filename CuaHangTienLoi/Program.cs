@@ -16,7 +16,7 @@ namespace CuaHangTienLoi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_ThemHD());
+            Application.Run(new frm_InHoaDon());
         }
     }
 }

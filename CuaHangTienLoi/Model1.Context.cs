@@ -40,6 +40,16 @@ namespace CuaHangTienLoi
         public virtual DbSet<QUYEN> QUYENs { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
     
+        public virtual ObjectResult<danhsachhanghoa_Result> danhsachhanghoa()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<danhsachhanghoa_Result>("danhsachhanghoa");
+        }
+    
+        public virtual ObjectResult<DANHSACHHOADON_Result> DANHSACHHOADON()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DANHSACHHOADON_Result>("DANHSACHHOADON");
+        }
+    
         public virtual ObjectResult<DANHSACHNV_Result> DANHSACHNV()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DANHSACHNV_Result>("DANHSACHNV");
@@ -55,24 +65,24 @@ namespace CuaHangTienLoi
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LAYMAHANG");
         }
     
+        public virtual ObjectResult<Nullable<int>> LAYMAHD()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LAYMAHD");
+        }
+    
         public virtual ObjectResult<Nullable<int>> LAYMAPN()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LAYMAPN");
         }
     
-        public virtual ObjectResult<DANHSACHHOADON_Result> DANHSACHHOADON()
+        public virtual ObjectResult<rpt_Hoadon_final_Result> rpt_Hoadon_final()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DANHSACHHOADON_Result>("DANHSACHHOADON");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rpt_Hoadon_final_Result>("rpt_Hoadon_final");
         }
     
-        public virtual ObjectResult<danhsachhanghoa_Result> danhsachhanghoa()
+        public virtual ObjectResult<rpt_Hoadon1_Result> rpt_Hoadon1()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<danhsachhanghoa_Result>("danhsachhanghoa");
-        }
-    
-        public virtual ObjectResult<Nullable<int>> LAYMAHD()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LAYMAHD");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rpt_Hoadon1_Result>("rpt_Hoadon1");
         }
     }
 }

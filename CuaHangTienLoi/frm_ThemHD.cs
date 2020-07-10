@@ -82,9 +82,9 @@ namespace CuaHangTienLoi
                 DateTime ngayhd = DateTime.Now;
                 hd.NGAYHD = DateTime.Parse(ngayhd.ToString("yyyy-MM-dd"));
                 hd.MANV = int.Parse(cbTenNV.SelectedValue.ToString());
-                if (db.KHACHHANGs.Where(p=>p.SDT == txtTenKH.Text).FirstOrDefault() != null)
+                if (db.KHACHHANGs.Where(p=>p.SDT == txtSDT.Text).FirstOrDefault() != null)
                 {
-                    int makh = db.KHACHHANGs.Where(p => p.SDT == txtTenKH.Text).FirstOrDefault().MAKH;
+                    int makh = db.KHACHHANGs.Where(p => p.SDT == txtSDT.Text).FirstOrDefault().MAKH;
                     hd.MAKH = makh;
                 }
                 hd.TONGTIEN = 0;
@@ -104,6 +104,22 @@ namespace CuaHangTienLoi
                         db.SaveChanges();
                         
                     }
+                }
+            }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+             using(CUAHANGTIENLOI db = new CUAHANGTIENLOI())
+            {
+                if (db.KHACHHANGs.Where(p => p.SDT == txtSDT.Text).FirstOrDefault() != null)
+                {
+                    string tenkh = db.KHACHHANGs.Where(p => p.SDT == txtSDT.Text).FirstOrDefault().TENKH;
+                    MessageBox.Show(tenkh);
+                }
+                else
+                {
+                    MessageBox.Show("Không có khách hàng này");
                 }
             }
         }
