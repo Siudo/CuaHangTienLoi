@@ -49,10 +49,11 @@ namespace CuaHangTienLoi
                 client.Credentials = new System.Net.NetworkCredential(txttendangnhap, txtmk);
                 client.EnableSsl = true; 
                 client.Send(mail);
-                MessageBox.Show("Đã gửi tin nhắn thành công!", "Thành Công", MessageBoxButtons.OK);
+                
             }) ;
             thread.Start();
-                this.Hide();
+            MessageBox.Show("Đã gửi tin nhắn thành công!", "Thành Công", MessageBoxButtons.OK);
+            this.Hide();
             
 
         }

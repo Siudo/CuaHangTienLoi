@@ -105,6 +105,7 @@ namespace CuaHangTienLoi
                         
                     }
                 }
+                MessageBox.Show("Thêm hoá đơn thành công");
             }
         }
 
@@ -122,6 +123,17 @@ namespace CuaHangTienLoi
                     MessageBox.Show("Không có khách hàng này");
                 }
             }
+        }
+
+        private void btnInHD_Click(object sender, EventArgs e)
+        {
+            frm_InHoaDon inhoadon = new frm_InHoaDon();
+            inhoadon.Visible = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

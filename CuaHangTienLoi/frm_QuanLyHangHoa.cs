@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -55,6 +56,7 @@ namespace CuaHangTienLoi
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+
             using (CUAHANGTIENLOI db = new CUAHANGTIENLOI())
             {
                 byte[] img = null;
@@ -62,8 +64,9 @@ namespace CuaHangTienLoi
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
                 HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.MAHANG.ToString() == txtMaHang.Text);
+                CTPHIEUNHAP ctpn = db.CTPHIEUNHAPs.FirstOrDefault(p => p.MAHANG.ToString() == txtMaHang.Text);
                 hh.TENHANG = txtTenhang.Text;
-                hh.SOLUONG = int.Parse(txtSL.Text);
+                ctpn.SLNHAP = int.Parse(txtSL.Text);
                 hh.HSD = DateTime.Parse(txtHSD.Text);
                 hh.Hinh = img;
                 hh.MALOAI = int.Parse(cbLoaiSP.SelectedValue.ToString());
@@ -71,6 +74,7 @@ namespace CuaHangTienLoi
                 hh.GIABAN = decimal.Parse(txtGiaBan.Text);
                 db.SaveChanges();
             }
+            MessageBox.Show("Sửa thành công", "Thông báo");
             loadDL();
         }
 
@@ -122,13 +126,40 @@ namespace CuaHangTienLoi
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            using(CUAHANGTIENLOI db = new CUAHANGTIENLOI())
+            
+        }
+        bool IsNumber(string val)
+        {
+            if (val != "")
+                return Regex.IsMatch(val, @"^[0-9]\d*\.?[0]*$");
+            else return true;
+        }
+        private void txtGiaBan_TextChanged(object sender, EventArgs e)
+        {
+            if (IsNumber(txtGiaBan.Text) == false)
             {
-                HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.MAHANG.ToString() == txtMaHang.Text);
-                db.HANGHOAs.Remove(hh);
-                db.SaveChanges();
+                MessageBox.Show("Dữ liệu nhập không hợp lệ, không được nhập ký tự", "Thông báo");
+                txtGiaBan.Text = "";
             }
+        }
+
+        private void txtSL_TextChanged(object sender, EventArgs e)
+        {
+            if (IsNumber(txtSL.Text) == false)
+            {
+                MessageBox.Show("Dữ liệu nhập không hợp lệ, không được nhập ký tự", "Thông báo");
+                txtSL.Text = "";
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
             loadDL();
+        }
+
+        private void btnThemLoaiSP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

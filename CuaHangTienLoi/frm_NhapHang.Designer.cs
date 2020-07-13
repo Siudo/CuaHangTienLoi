@@ -117,6 +117,7 @@
             this.txtGiaNhap.ShadowDecoration.Parent = this.txtGiaNhap;
             this.txtGiaNhap.Size = new System.Drawing.Size(175, 40);
             this.txtGiaNhap.TabIndex = 29;
+            this.txtGiaNhap.TextChanged += new System.EventHandler(this.txtGiaNhap_TextChanged);
             // 
             // label4
             // 
@@ -292,6 +293,7 @@
             this.txtHSD.ShadowDecoration.Parent = this.txtHSD;
             this.txtHSD.Size = new System.Drawing.Size(175, 40);
             this.txtHSD.TabIndex = 35;
+            this.txtHSD.TextChanged += new System.EventHandler(this.txtHSD_TextChanged);
             // 
             // dtpHSD
             // 

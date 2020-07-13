@@ -207,6 +207,7 @@
             this.btnInHD.Size = new System.Drawing.Size(180, 45);
             this.btnInHD.TabIndex = 30;
             this.btnInHD.Text = "In hoá đơn";
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // btnCancel
             // 
@@ -223,6 +224,7 @@
             this.btnCancel.Size = new System.Drawing.Size(180, 45);
             this.btnCancel.TabIndex = 31;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frm_ThemHD
             // 

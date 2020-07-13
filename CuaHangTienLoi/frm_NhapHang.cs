@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -49,9 +50,26 @@ namespace CuaHangTienLoi
                 picSP.ImageLocation = imgSP;
             }
         }
-
+        bool Kiemtra()
+        {
+             if(txtDVT.Text == "" || txtGiaNhap.Text == "" || txtHSD.Text == "" || txtSL.Text == "" || txtTenhang.Text == "" || picSP.Image == null)
+            {
+                
+                return  false ;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (Kiemtra() == false)
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin");
+                return;
+            }
+           
             using (CUAHANGTIENLOI db = new CUAHANGTIENLOI())
             {
                 byte[] img = null;
@@ -84,17 +102,57 @@ namespace CuaHangTienLoi
                 db.CTPHIEUNHAPs.Add(ctpn);
                 db.SaveChanges();
             }
+            MessageBox.Show("Thêm thành công");
             this.Hide();
         }
 
         private void txtSL_TextChanged(object sender, EventArgs e)
         {
-            
+           
+            if(IsNumber(txtSL.Text)== false)
+            {
+                MessageBox.Show("Dữ liệu nhập không hợp lệ, không được nhập ký tự", "Thông báo");
+                txtSL.Text = "";
+            }           
+
+        }
+        bool IsNumber(string val)
+        {
+            if (val != "")
+                return Regex.IsMatch(val, @"^[0-9]\d*\.?[0]*$");
+            else return true;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtHSD_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DateTime.Parse(txtHSD.Text) <= DateTime.Now)
+                {
+                    MessageBox.Show("Sản phẩm hết hạn sử dụng");
+                    return;
+                }
+            }
+            catch 
+            {
+
+                
+            }
+            
+        }
+
+        private void txtGiaNhap_TextChanged(object sender, EventArgs e)
+        {
+            if (IsNumber(txtGiaNhap.Text) == false)
+            {
+                MessageBox.Show("Dữ liệu nhập không hợp lệ, không được nhập ký tự", "Thông báo");
+                txtGiaNhap.Text = "";
+            }
         }
     }
 }

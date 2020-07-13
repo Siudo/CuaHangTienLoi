@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CUAHANGTIENLOIPDTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CUAHANGTIENLOIPDTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CHUCVU">
           <Key>
             <PropertyRef Name="MACV" />
@@ -280,15 +280,25 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="chitietquyen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="danhsachhanghoa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="DANHSACHHOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="DANHSACHNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="DGVHANGHOA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Doanhthu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="LAYMAHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="LAYMAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="LAYMAPN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="rpt_Hoadon_final" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="rpt_Hoadon1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SLbanduoc_TK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SLhethan_TK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SLHH_hethan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SLHH_hethan1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SLHH_Nam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SLHH_Nam1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SLNhap_TK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TONGTIENTHUDC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="CUAHANGTIENLOIPDTModelStoreContainer">
           <EntitySet Name="CHUCVU" EntityType="Self.CHUCVU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CTHOADON" EntityType="Self.CTHOADON" Schema="dbo" store:Type="Tables" />
@@ -356,8 +366,7 @@
             <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CUAHANGTIENLOIPDTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -702,6 +711,16 @@
           <FunctionImport Name="LAYMAPN" ReturnType="Collection(Int32)" />
           <FunctionImport Name="rpt_Hoadon_final" ReturnType="Collection(CUAHANGTIENLOIPDTModel.rpt_Hoadon_final_Result)" />
           <FunctionImport Name="rpt_Hoadon1" ReturnType="Collection(CUAHANGTIENLOIPDTModel.rpt_Hoadon1_Result)" />
+          <FunctionImport Name="SLHH_Nam" ReturnType="Collection(CUAHANGTIENLOIPDTModel.SLHH_Nam_Result)" />
+          <FunctionImport Name="SLHH_Nam1" ReturnType="Collection(CUAHANGTIENLOIPDTModel.SLHH_Nam1_Result)" />
+          <FunctionImport Name="SLHH_hethan" ReturnType="Collection(CUAHANGTIENLOIPDTModel.SLHH_hethan_Result)" />
+          <FunctionImport Name="SLHH_hethan1" ReturnType="Collection(CUAHANGTIENLOIPDTModel.SLHH_hethan1_Result)" />
+          <FunctionImport Name="TONGTIENTHUDC" ReturnType="Collection(CUAHANGTIENLOIPDTModel.TONGTIENTHUDC_Result)" />
+          <FunctionImport Name="Doanhthu" ReturnType="Collection(Decimal)" />
+          <FunctionImport Name="SLbanduoc_TK" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="SLhethan_TK" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="SLNhap_TK" ReturnType="Collection(CUAHANGTIENLOIPDTModel.SLNhap_TK_Result)" />
+          <FunctionImport Name="chitietquyen" ReturnType="Collection(CUAHANGTIENLOIPDTModel.chitietquyen_Result)" />
         </EntityContainer>
         <ComplexType Name="danhsachhanghoa_Result">
           <Property Type="Int32" Name="MAHANG" Nullable="false" />
@@ -756,6 +775,34 @@
           <Property Type="Int32" Name="SLBAN" Nullable="true" />
           <Property Type="Decimal" Name="GIABAN" Nullable="true" Precision="19" />
           <Property Type="Decimal" Name="TONGTIEN" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SLHH_Nam_Result">
+          <Property Type="Int32" Name="Column1" Nullable="true" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SLHH_Nam1_Result">
+          <Property Type="Int32" Name="Thoigian" Nullable="true" />
+          <Property Type="Int32" Name="Soluong" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SLHH_hethan_Result">
+          <Property Type="String" Name="TENHANG" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Column1" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SLHH_hethan1_Result">
+          <Property Type="String" Name="TENHANG" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Soluong" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="TONGTIENTHUDC_Result">
+          <Property Type="Int32" Name="thoigian" Nullable="true" />
+          <Property Type="Decimal" Name="tongtien" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SLNhap_TK_Result">
+          <Property Type="Int32" Name="thoigian" Nullable="true" />
+          <Property Type="Int32" Name="soluongnhap" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="chitietquyen_Result">
+          <Property Type="String" Name="MAQUYEN" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="MACV" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -970,6 +1017,65 @@
                 <ScalarProperty Name="SLBAN" ColumnName="SLBAN" />
                 <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
                 <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SLHH_Nam" FunctionName="CUAHANGTIENLOIPDTModel.Store.SLHH_Nam">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANGTIENLOIPDTModel.SLHH_Nam_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SLHH_Nam1" FunctionName="CUAHANGTIENLOIPDTModel.Store.SLHH_Nam1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANGTIENLOIPDTModel.SLHH_Nam1_Result">
+                <ScalarProperty Name="Thoigian" ColumnName="Thoigian" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SLHH_hethan" FunctionName="CUAHANGTIENLOIPDTModel.Store.SLHH_hethan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANGTIENLOIPDTModel.SLHH_hethan_Result">
+                <ScalarProperty Name="TENHANG" ColumnName="TENHANG" />
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SLHH_hethan1" FunctionName="CUAHANGTIENLOIPDTModel.Store.SLHH_hethan1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANGTIENLOIPDTModel.SLHH_hethan1_Result">
+                <ScalarProperty Name="TENHANG" ColumnName="TENHANG" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TONGTIENTHUDC" FunctionName="CUAHANGTIENLOIPDTModel.Store.TONGTIENTHUDC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANGTIENLOIPDTModel.TONGTIENTHUDC_Result">
+                <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+                <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Doanhthu" FunctionName="CUAHANGTIENLOIPDTModel.Store.Doanhthu" />
+          <FunctionImportMapping FunctionImportName="SLbanduoc_TK" FunctionName="CUAHANGTIENLOIPDTModel.Store.SLbanduoc_TK" />
+          <FunctionImportMapping FunctionImportName="SLhethan_TK" FunctionName="CUAHANGTIENLOIPDTModel.Store.SLhethan_TK" />
+          <FunctionImportMapping FunctionImportName="SLNhap_TK" FunctionName="CUAHANGTIENLOIPDTModel.Store.SLNhap_TK">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANGTIENLOIPDTModel.SLNhap_TK_Result">
+                <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+                <ScalarProperty Name="soluongnhap" ColumnName="soluongnhap" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="chitietquyen" FunctionName="CUAHANGTIENLOIPDTModel.Store.chitietquyen">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANGTIENLOIPDTModel.chitietquyen_Result">
+                <ScalarProperty Name="MAQUYEN" ColumnName="MAQUYEN" />
+                <ScalarProperty Name="MACV" ColumnName="MACV" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

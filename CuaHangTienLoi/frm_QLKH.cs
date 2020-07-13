@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -52,8 +53,26 @@ namespace CuaHangTienLoi
             txtSDT.Text = null;
             txtDiemTichLuy.Text = null;
         }
+        bool kiemtra()
+        {
+            if( txtTenKH.Text == ""  || txtSDT.Text == ""  )
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+         
+            
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if(kiemtra() == false)
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin");
+                return;
+            }
             using(CUAHANGTIENLOI db = new CUAHANGTIENLOI())
             {
                 KHACHHANG kh = new KHACHHANG();
@@ -90,6 +109,21 @@ namespace CuaHangTienLoi
                 db.SaveChanges();
             }
             loadDL();
+        }
+        bool IsNumber(string val)
+        {
+            if (val != "")
+                return Regex.IsMatch(val, @"^[0-9]\d*\.?[0]*$");
+            else return true;
+        }
+        private void txtDiemTichLuy_TextChanged(object sender, EventArgs e)
+        {
+            if (IsNumber(txtDiemTichLuy.Text) == false)
+            {
+                MessageBox.Show("Dữ liệu nhập không hợp lệ, không được nhập ký tự", "Thông báo");
+                txtDiemTichLuy.Text = "";
+            }
+
         }
     }
 }

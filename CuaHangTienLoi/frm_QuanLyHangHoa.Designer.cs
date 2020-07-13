@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.picSP = new System.Windows.Forms.PictureBox();
             this.txtTenhang = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +59,8 @@
             this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMaHang = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThemLoaiSP = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.picSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
             this.SuspendLayout();
@@ -73,10 +74,10 @@
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.HoverState.Parent = this.btnThem;
-            this.btnThem.Location = new System.Drawing.Point(521, 270);
+            this.btnThem.Location = new System.Drawing.Point(524, 270);
             this.btnThem.Name = "btnThem";
             this.btnThem.ShadowDecoration.Parent = this.btnThem;
-            this.btnThem.Size = new System.Drawing.Size(137, 45);
+            this.btnThem.Size = new System.Drawing.Size(165, 45);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -90,30 +91,13 @@
             this.btnSua.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.HoverState.Parent = this.btnSua;
-            this.btnSua.Location = new System.Drawing.Point(686, 270);
+            this.btnSua.Location = new System.Drawing.Point(706, 270);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
-            this.btnSua.Size = new System.Drawing.Size(137, 45);
+            this.btnSua.Size = new System.Drawing.Size(165, 45);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BorderRadius = 15;
-            this.btnXoa.CheckedState.Parent = this.btnXoa;
-            this.btnXoa.CustomImages.Parent = this.btnXoa;
-            this.btnXoa.FillColor = System.Drawing.Color.Black;
-            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.HoverState.Parent = this.btnXoa;
-            this.btnXoa.Location = new System.Drawing.Point(864, 270);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(137, 45);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // picSP
             // 
@@ -267,6 +251,7 @@
             this.txtSL.ShadowDecoration.Parent = this.txtSL;
             this.txtSL.Size = new System.Drawing.Size(175, 40);
             this.txtSL.TabIndex = 11;
+            this.txtSL.TextChanged += new System.EventHandler(this.txtSL_TextChanged);
             // 
             // label5
             // 
@@ -303,6 +288,7 @@
             this.txtGiaBan.ShadowDecoration.Parent = this.txtGiaBan;
             this.txtGiaBan.Size = new System.Drawing.Size(175, 40);
             this.txtGiaBan.TabIndex = 13;
+            this.txtGiaBan.TextChanged += new System.EventHandler(this.txtGiaBan_TextChanged);
             // 
             // label6
             // 
@@ -343,10 +329,10 @@
             this.btnChonHinh.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.btnChonHinh.ForeColor = System.Drawing.Color.White;
             this.btnChonHinh.HoverState.Parent = this.btnChonHinh;
-            this.btnChonHinh.Location = new System.Drawing.Point(361, 270);
+            this.btnChonHinh.Location = new System.Drawing.Point(344, 270);
             this.btnChonHinh.Name = "btnChonHinh";
             this.btnChonHinh.ShadowDecoration.Parent = this.btnChonHinh;
-            this.btnChonHinh.Size = new System.Drawing.Size(137, 45);
+            this.btnChonHinh.Size = new System.Drawing.Size(165, 45);
             this.btnChonHinh.TabIndex = 17;
             this.btnChonHinh.Text = "Chọn hình";
             this.btnChonHinh.Click += new System.EventHandler(this.btnChonHinh_Click);
@@ -491,6 +477,7 @@
             this.txtMaHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaHang.DisabledState.Parent = this.txtMaHang;
             this.txtMaHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaHang.Enabled = false;
             this.txtMaHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaHang.FocusedState.Parent = this.txtMaHang;
             this.txtMaHang.Font = new System.Drawing.Font("Tahoma", 9.75F);
@@ -507,12 +494,48 @@
             this.txtMaHang.Size = new System.Drawing.Size(49, 40);
             this.txtMaHang.TabIndex = 19;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.Black;
+            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(894, 270);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(165, 45);
+            this.guna2Button1.TabIndex = 21;
+            this.guna2Button1.Text = "Làm mới";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // btnThemLoaiSP
+            // 
+            this.btnThemLoaiSP.BorderRadius = 15;
+            this.btnThemLoaiSP.CheckedState.Parent = this.btnThemLoaiSP;
+            this.btnThemLoaiSP.CustomImages.Parent = this.btnThemLoaiSP;
+            this.btnThemLoaiSP.FillColor = System.Drawing.Color.Black;
+            this.btnThemLoaiSP.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.btnThemLoaiSP.ForeColor = System.Drawing.Color.White;
+            this.btnThemLoaiSP.HoverState.Parent = this.btnThemLoaiSP;
+            this.btnThemLoaiSP.Location = new System.Drawing.Point(951, 181);
+            this.btnThemLoaiSP.Name = "btnThemLoaiSP";
+            this.btnThemLoaiSP.ShadowDecoration.Parent = this.btnThemLoaiSP;
+            this.btnThemLoaiSP.Size = new System.Drawing.Size(35, 36);
+            this.btnThemLoaiSP.TabIndex = 22;
+            this.btnThemLoaiSP.Text = "+";
+            this.btnThemLoaiSP.Click += new System.EventHandler(this.btnThemLoaiSP_Click);
+            // 
             // frm_QuanLyHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1081, 645);
+            this.Controls.Add(this.btnThemLoaiSP);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtMaHang);
             this.Controls.Add(this.dgvHangHoa);
@@ -530,7 +553,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTenhang);
             this.Controls.Add(this.picSP);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -547,7 +569,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2Button btnSua;
-        private Guna.UI2.WinForms.Guna2Button btnXoa;
         private System.Windows.Forms.PictureBox picSP;
         private Guna.UI2.WinForms.Guna2TextBox txtTenhang;
         private System.Windows.Forms.Label label1;
@@ -574,5 +595,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txtMaHang;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnThemLoaiSP;
     }
 }

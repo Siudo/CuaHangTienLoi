@@ -84,5 +84,55 @@ namespace CuaHangTienLoi
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rpt_Hoadon1_Result>("rpt_Hoadon1");
         }
+    
+        public virtual ObjectResult<SLHH_Nam_Result> SLHH_Nam()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SLHH_Nam_Result>("SLHH_Nam");
+        }
+    
+        public virtual ObjectResult<SLHH_Nam1_Result> SLHH_Nam1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SLHH_Nam1_Result>("SLHH_Nam1");
+        }
+    
+        public virtual ObjectResult<SLHH_hethan_Result> SLHH_hethan()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SLHH_hethan_Result>("SLHH_hethan");
+        }
+    
+        public virtual ObjectResult<SLHH_hethan1_Result> SLHH_hethan1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SLHH_hethan1_Result>("SLHH_hethan1");
+        }
+    
+        public virtual ObjectResult<TONGTIENTHUDC_Result> TONGTIENTHUDC()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TONGTIENTHUDC_Result>("TONGTIENTHUDC");
+        }
+    
+        public virtual ObjectResult<Nullable<decimal>> Doanhthu()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("Doanhthu");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> SLbanduoc_TK()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("SLbanduoc_TK");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> SLhethan_TK()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("SLhethan_TK");
+        }
+    
+        public virtual ObjectResult<SLNhap_TK_Result> SLNhap_TK()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SLNhap_TK_Result>("SLNhap_TK");
+        }
+    
+        public virtual ObjectResult<chitietquyen_Result> chitietquyen()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<chitietquyen_Result>("chitietquyen");
+        }
     }
 }

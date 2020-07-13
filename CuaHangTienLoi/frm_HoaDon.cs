@@ -64,10 +64,11 @@ namespace CuaHangTienLoi
                         MessageBox.Show("Không tim thấy");
                         loadDL();
                     }
-                    
-                    
-                    
-                }else if (string.IsNullOrEmpty(txtMaHD.Text))
+
+
+
+                }
+                else if (string.IsNullOrEmpty(txtMaHD.Text))
                 {
                     if(db.KHACHHANGs.Where(p => p.TENKH.Contains(txtTenKH.Text)).FirstOrDefault() != null)
                     {
@@ -81,8 +82,8 @@ namespace CuaHangTienLoi
                         MessageBox.Show("Không tim thấy");
                         loadDL();
                     }
-                    
-                }
+
+                } 
               
 
             }
@@ -92,5 +93,13 @@ namespace CuaHangTienLoi
         {
             loadDL();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frm_ThemHD themhd = new frm_ThemHD();
+            themhd.Visible = true;
+        }
+
+       
     }
 }
