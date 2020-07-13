@@ -60,7 +60,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtMaHang = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThemLoaiSP = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.picSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
             this.SuspendLayout();
@@ -511,30 +510,12 @@
             this.guna2Button1.Text = "Làm mới";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // btnThemLoaiSP
-            // 
-            this.btnThemLoaiSP.BorderRadius = 15;
-            this.btnThemLoaiSP.CheckedState.Parent = this.btnThemLoaiSP;
-            this.btnThemLoaiSP.CustomImages.Parent = this.btnThemLoaiSP;
-            this.btnThemLoaiSP.FillColor = System.Drawing.Color.Black;
-            this.btnThemLoaiSP.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.btnThemLoaiSP.ForeColor = System.Drawing.Color.White;
-            this.btnThemLoaiSP.HoverState.Parent = this.btnThemLoaiSP;
-            this.btnThemLoaiSP.Location = new System.Drawing.Point(951, 181);
-            this.btnThemLoaiSP.Name = "btnThemLoaiSP";
-            this.btnThemLoaiSP.ShadowDecoration.Parent = this.btnThemLoaiSP;
-            this.btnThemLoaiSP.Size = new System.Drawing.Size(35, 36);
-            this.btnThemLoaiSP.TabIndex = 22;
-            this.btnThemLoaiSP.Text = "+";
-            this.btnThemLoaiSP.Click += new System.EventHandler(this.btnThemLoaiSP_Click);
-            // 
             // frm_QuanLyHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1081, 645);
-            this.Controls.Add(this.btnThemLoaiSP);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtMaHang);
@@ -596,6 +577,5 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txtMaHang;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button btnThemLoaiSP;
     }
 }

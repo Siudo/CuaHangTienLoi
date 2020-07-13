@@ -179,12 +179,6 @@
     <Compile Include="frm_ThemHD.Designer.cs">
       <DependentUpon>frm_ThemHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_ThemLoaiSP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_ThemLoaiSP.Designer.cs">
-      <DependentUpon>frm_ThemLoaiSP.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_ThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,9 +289,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemHD.resx">
       <DependentUpon>frm_ThemHD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_ThemLoaiSP.resx">
-      <DependentUpon>frm_ThemLoaiSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThongKe.resx">
       <DependentUpon>frm_ThongKe.cs</DependentUpon>
