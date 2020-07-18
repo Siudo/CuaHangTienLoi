@@ -20,7 +20,11 @@ namespace CuaHangTienLoi
 
         private void frm_ThemHD_Load(object sender, EventArgs e)
         {
-            using(CUAHANGTIENLOI db = new CUAHANGTIENLOI())
+            loadDL();
+        }
+        void loadDL()
+        {
+            using (CUAHANGTIENLOI db = new CUAHANGTIENLOI())
             {
                 var ds_nvbh = from c in db.NHANVIENs
                               where c.MACV == 5
@@ -35,14 +39,14 @@ namespace CuaHangTienLoi
                     it.Text = item.TENHANG.ToString();
                     DateTime hsd = (DateTime)item.HSD;
                     it.SubItems.Add(hsd.ToString("yyyy-MM-dd"));
+                    it.SubItems.Add(item.DONVITINH.ToString());
                     it.SubItems.Add(((int)item.GIABAN) + "  VND");
                     it.SubItems.Add("     ");
                     lvSP.Items.Add(it);
                 }
-            
+
             }
         }
-
         private void lvSP_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
             if (e.Item.Checked == false)
@@ -67,7 +71,7 @@ namespace CuaHangTienLoi
                     e.Item.Checked = false;
                     return;
                 }
-                e.Item.SubItems[3].Text = myvalue;
+                e.Item.SubItems[4].Text = myvalue;
             }
            
             
@@ -98,7 +102,7 @@ namespace CuaHangTienLoi
                         int mahang = db.danhsachhanghoa().Where(p => p.TENHANG.Contains(tenhang)).FirstOrDefault().MAHANG;
                         CTHOADON cthd = new CTHOADON();
                         cthd.MAHANG = mahang;
-                        cthd.SLBAN = int.Parse(item.SubItems[3].Text);
+                        cthd.SLBAN = int.Parse(item.SubItems[4].Text);
                         cthd.MAHD = int.Parse(db.LAYMAHD().FirstOrDefault().ToString());
                         db.CTHOADONs.Add(cthd);
                         db.SaveChanges();
@@ -134,6 +138,61 @@ namespace CuaHangTienLoi
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnTKTENSP_Click(object sender, EventArgs e)
+        {
+
+        }
+        public string RemoveUnicode(string text)
+        {
+            string[] arr1 = new string[] { "á", "à", "ả", "ã", "ạ", "â", "ấ", "ầ", "ẩ", "ẫ", "ậ", "ă", "ắ", "ằ", "ẳ", "ẵ", "ặ",
+                                           "đ","é","è","ẻ","ẽ","ẹ","ê","ế","ề","ể","ễ","ệ","í","ì","ỉ","ĩ","ị",
+                                           "ó","ò","ỏ","õ","ọ","ô","ố","ồ","ổ","ỗ","ộ","ơ","ớ","ờ","ở","ỡ","ợ",
+                                           "ú","ù","ủ","ũ","ụ","ư","ứ","ừ","ử","ữ","ự","ý","ỳ","ỷ","ỹ","ỵ",};
+            string[] arr2 = new string[] { "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a",
+                                           "d","e","e","e","e","e","e","e","e","e","e","e","i","i","i","i","i",
+                                           "o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o",
+                                           "u","u","u","u","u","u","u","u","u","u","u","y","y","y","y","y",};
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                text = text.Replace(arr1[i], arr2[i]);
+                text = text.Replace(arr1[i].ToUpper(), arr2[i].ToUpper());
+            }
+            return text;
+        }
+        private void txtTenSP_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void txtTenSP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtTenSP.Text == "")
+                loadDL();
+            lvSP.Items.Clear();
+           
+            using (CUAHANGTIENLOI db = new CUAHANGTIENLOI())
+            {
+
+                List<danhsachhanghoa_Result> ds_hh = db.danhsachhanghoa().ToList();
+                foreach (danhsachhanghoa_Result item in ds_hh)
+                {
+                    if (RemoveUnicode(item.TENHANG.ToLower()).Contains(RemoveUnicode(txtTenSP.Text.ToLower())))
+                    {
+                        ListViewItem it = new ListViewItem();
+                        it.Text = item.TENHANG.ToString();
+                        DateTime hsd = (DateTime)item.HSD;
+                        it.SubItems.Add(hsd.ToString("yyyy-MM-dd"));
+                        it.SubItems.Add(item.DONVITINH.ToString());
+                        it.SubItems.Add(((int)item.GIABAN) + "  VND");
+                        it.SubItems.Add("     ");
+                        lvSP.Items.Add(it);
+                    }
+
+                }
+
+            }
         }
     }
 }

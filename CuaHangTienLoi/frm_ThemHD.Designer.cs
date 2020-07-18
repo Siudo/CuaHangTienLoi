@@ -42,6 +42,8 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnInHD = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.txtTenSP = new Guna.UI2.WinForms.Guna2TextBox();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnTimKiem
@@ -54,7 +56,7 @@
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.HoverState.Parent = this.btnTimKiem;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.Location = new System.Drawing.Point(457, 57);
+            this.btnTimKiem.Location = new System.Drawing.Point(439, 83);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.ShadowDecoration.Parent = this.btnTimKiem;
             this.btnTimKiem.Size = new System.Drawing.Size(37, 38);
@@ -65,7 +67,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(115, 144);
+            this.label4.Location = new System.Drawing.Point(542, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 16);
             this.label4.TabIndex = 24;
@@ -75,7 +77,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(115, 69);
+            this.label3.Location = new System.Drawing.Point(97, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 16);
             this.label3.TabIndex = 23;
@@ -98,7 +100,7 @@
             this.txtSDT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
-            this.txtSDT.Location = new System.Drawing.Point(229, 57);
+            this.txtSDT.Location = new System.Drawing.Point(211, 83);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
@@ -124,7 +126,7 @@
             this.cbTenNV.HoverState.Parent = this.cbTenNV;
             this.cbTenNV.ItemHeight = 30;
             this.cbTenNV.ItemsAppearance.Parent = this.cbTenNV;
-            this.cbTenNV.Location = new System.Drawing.Point(229, 133);
+            this.cbTenNV.Location = new System.Drawing.Point(656, 24);
             this.cbTenNV.Name = "cbTenNV";
             this.cbTenNV.ShadowDecoration.Parent = this.cbTenNV;
             this.cbTenNV.Size = new System.Drawing.Size(211, 36);
@@ -139,7 +141,7 @@
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.HoverState.Parent = this.btnThem;
-            this.btnThem.Location = new System.Drawing.Point(47, 223);
+            this.btnThem.Location = new System.Drawing.Point(180, 175);
             this.btnThem.Name = "btnThem";
             this.btnThem.ShadowDecoration.Parent = this.btnThem;
             this.btnThem.Size = new System.Drawing.Size(180, 45);
@@ -155,15 +157,16 @@
             this.lvSP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
+            this.columnHeader5,
             this.columnHeader3,
             this.columnHeader4});
             this.lvSP.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvSP.ForeColor = System.Drawing.Color.White;
             this.lvSP.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvSP.HideSelection = false;
-            this.lvSP.Location = new System.Drawing.Point(12, 361);
+            this.lvSP.Location = new System.Drawing.Point(13, 245);
             this.lvSP.Name = "lvSP";
-            this.lvSP.Size = new System.Drawing.Size(664, 220);
+            this.lvSP.Size = new System.Drawing.Size(937, 220);
             this.lvSP.TabIndex = 29;
             this.lvSP.UseCompatibleStateImageBehavior = false;
             this.lvSP.View = System.Windows.Forms.View.Details;
@@ -188,9 +191,9 @@
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Số lượng";
+            this.columnHeader4.Text = "Số lượng mua";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 96;
+            this.columnHeader4.Width = 200;
             // 
             // btnInHD
             // 
@@ -201,7 +204,7 @@
             this.btnInHD.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInHD.ForeColor = System.Drawing.Color.White;
             this.btnInHD.HoverState.Parent = this.btnInHD;
-            this.btnInHD.Location = new System.Drawing.Point(247, 223);
+            this.btnInHD.Location = new System.Drawing.Point(380, 175);
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.ShadowDecoration.Parent = this.btnInHD;
             this.btnInHD.Size = new System.Drawing.Size(180, 45);
@@ -218,7 +221,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Location = new System.Drawing.Point(460, 223);
+            this.btnCancel.Location = new System.Drawing.Point(593, 175);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(180, 45);
@@ -226,12 +229,49 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtTenSP
+            // 
+            this.txtTenSP.Animated = true;
+            this.txtTenSP.BorderColor = System.Drawing.Color.Black;
+            this.txtTenSP.BorderRadius = 20;
+            this.txtTenSP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenSP.DefaultText = "";
+            this.txtTenSP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenSP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenSP.DisabledState.Parent = this.txtTenSP;
+            this.txtTenSP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenSP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenSP.FocusedState.Parent = this.txtTenSP;
+            this.txtTenSP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenSP.HoverState.Parent = this.txtTenSP;
+            this.txtTenSP.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtTenSP.IconLeft")));
+            this.txtTenSP.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.txtTenSP.Location = new System.Drawing.Point(100, 24);
+            this.txtTenSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.PasswordChar = '\0';
+            this.txtTenSP.PlaceholderText = "";
+            this.txtTenSP.SelectedText = "";
+            this.txtTenSP.ShadowDecoration.Parent = this.txtTenSP;
+            this.txtTenSP.Size = new System.Drawing.Size(322, 38);
+            this.txtTenSP.TabIndex = 32;
+            this.txtTenSP.TextChanged += new System.EventHandler(this.txtTenSP_TextChanged);
+            this.txtTenSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenSP_KeyDown);
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Đơn vị tính";
+            this.columnHeader5.Width = 174;
+            // 
             // frm_ThemHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(688, 593);
+            this.ClientSize = new System.Drawing.Size(975, 471);
+            this.Controls.Add(this.txtTenSP);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnInHD);
             this.Controls.Add(this.lvSP);
@@ -266,5 +306,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private Guna.UI2.WinForms.Guna2Button btnInHD;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenSP;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
