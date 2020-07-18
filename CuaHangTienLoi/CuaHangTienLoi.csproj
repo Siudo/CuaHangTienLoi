@@ -232,6 +232,9 @@
     <Compile Include="rpt_Hoadon_final_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="rpt_Hoadon_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="SLHH_hethan1_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -247,7 +250,16 @@
     <Compile Include="SLNhap_TK_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="TAIKHOAN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -303,10 +315,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="report_HoaDon.rdlc" />
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="DataHoaDon.xsc">
       <DependentUpon>DataHoaDon.xsd</DependentUpon>
     </None>
@@ -318,6 +326,10 @@
     <None Include="DataHoaDon.xss">
       <DependentUpon>DataHoaDon.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

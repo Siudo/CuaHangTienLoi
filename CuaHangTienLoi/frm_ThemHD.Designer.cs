@@ -243,6 +243,7 @@
             this.Controls.Add(this.btnThem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_ThemHD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ThemHD";
             this.Load += new System.EventHandler(this.frm_ThemHD_Load);
             this.ResumeLayout(false);

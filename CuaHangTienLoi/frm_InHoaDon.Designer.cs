@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataHoaDon = new CuaHangTienLoi.DataHoaDon();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.rpt_Hoadon1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataHoaDon = new CuaHangTienLoi.DataHoaDon();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.rpt_Hoadon1TableAdapter = new CuaHangTienLoi.DataHoaDonTableAdapters.rpt_Hoadon1TableAdapter();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DataHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpt_Hoadon1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // rpt_Hoadon1BindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            reportDataSource2.Name = "DataHoaDonrpt";
-            reportDataSource2.Value = this.rpt_Hoadon1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CuaHangTienLoi.report_HoaDon.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 50);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(646, 555);
-            this.reportViewer1.TabIndex = 0;
+            this.rpt_Hoadon1BindingSource.DataMember = "rpt_Hoadon1";
+            this.rpt_Hoadon1BindingSource.DataSource = this.DataHoaDon;
             // 
             // DataHoaDon
             // 
             this.DataHoaDon.DataSetName = "DataHoaDon";
             this.DataHoaDon.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // rpt_Hoadon1BindingSource
+            // reportViewer1
             // 
-            this.rpt_Hoadon1BindingSource.DataMember = "rpt_Hoadon1";
-            this.rpt_Hoadon1BindingSource.DataSource = this.DataHoaDon;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            reportDataSource1.Name = "DataHoaDonrpt";
+            reportDataSource1.Value = this.rpt_Hoadon1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CuaHangTienLoi.report_HoaDon.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 50);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(646, 555);
+            this.reportViewer1.TabIndex = 0;
             // 
             // rpt_Hoadon1TableAdapter
             // 
@@ -94,10 +94,11 @@
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_InHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_InHoaDon";
             this.Load += new System.EventHandler(this.frm_InHoaDon_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpt_Hoadon1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }

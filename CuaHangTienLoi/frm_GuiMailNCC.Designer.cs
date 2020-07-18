@@ -173,6 +173,7 @@
             this.Controls.Add(this.btnGui);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_GuiMailNCC";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_GuiMailNCC";
             this.Load += new System.EventHandler(this.frm_GuiMailNCC_Load);
             this.ResumeLayout(false);

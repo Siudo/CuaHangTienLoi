@@ -10,15 +10,14 @@
 namespace CuaHangTienLoi
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class DANHSACHNV_Result
+    public partial class sysdiagram
     {
-        public int MANV { get; set; }
-        public string TENNV { get; set; }
-        public string GMAIL { get; set; }
-        public string SDT { get; set; }
-        public Nullable<decimal> LUONG { get; set; }
-        public string TENCV { get; set; }
-        public Nullable<int> MATK { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

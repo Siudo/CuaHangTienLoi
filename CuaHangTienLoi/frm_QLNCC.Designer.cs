@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDSNCC = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.mancc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,32 +50,29 @@
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtGmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.mancc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuiMail = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNCC)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDSNCC
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvDSNCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDSNCC.AllowUserToAddRows = false;
+            this.dgvDSNCC.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvDSNCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDSNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSNCC.BackgroundColor = System.Drawing.Color.White;
             this.dgvDSNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDSNCC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvDSNCC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDSNCC.ColumnHeadersHeight = 25;
             this.dgvDSNCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mancc,
@@ -78,19 +80,20 @@
             this.sdt,
             this.diachi,
             this.gmail});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSNCC.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSNCC.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDSNCC.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvDSNCC.EnableHeadersVisualStyles = false;
             this.dgvDSNCC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDSNCC.Location = new System.Drawing.Point(0, 304);
             this.dgvDSNCC.Name = "dgvDSNCC";
+            this.dgvDSNCC.ReadOnly = true;
             this.dgvDSNCC.RowHeadersVisible = false;
             this.dgvDSNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSNCC.Size = new System.Drawing.Size(1065, 302);
@@ -109,7 +112,7 @@
             this.dgvDSNCC.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDSNCC.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDSNCC.ThemeStyle.HeaderStyle.Height = 25;
-            this.dgvDSNCC.ThemeStyle.ReadOnly = false;
+            this.dgvDSNCC.ThemeStyle.ReadOnly = true;
             this.dgvDSNCC.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSNCC.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvDSNCC.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -118,6 +121,41 @@
             this.dgvDSNCC.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDSNCC.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvDSNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSNCC_CellClick);
+            // 
+            // mancc
+            // 
+            this.mancc.DataPropertyName = "mancc";
+            this.mancc.HeaderText = "Mã nhà cung cấp";
+            this.mancc.Name = "mancc";
+            this.mancc.ReadOnly = true;
+            // 
+            // tenncc
+            // 
+            this.tenncc.DataPropertyName = "tenncc";
+            this.tenncc.HeaderText = "Tên nhà cung cấp";
+            this.tenncc.Name = "tenncc";
+            this.tenncc.ReadOnly = true;
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sdt";
+            this.sdt.HeaderText = "Số điện thoại";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            // 
+            // gmail
+            // 
+            this.gmail.DataPropertyName = "gmail";
+            this.gmail.HeaderText = "Gmail";
+            this.gmail.Name = "gmail";
+            this.gmail.ReadOnly = true;
             // 
             // btnXoa
             // 
@@ -266,6 +304,7 @@
             this.txtMaNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaNCC.DisabledState.Parent = this.txtMaNCC;
             this.txtMaNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNCC.Enabled = false;
             this.txtMaNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaNCC.FocusedState.Parent = this.txtMaNCC;
             this.txtMaNCC.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -354,36 +393,6 @@
             this.txtGmail.ShadowDecoration.Parent = this.txtGmail;
             this.txtGmail.Size = new System.Drawing.Size(233, 42);
             this.txtGmail.TabIndex = 51;
-            // 
-            // mancc
-            // 
-            this.mancc.DataPropertyName = "mancc";
-            this.mancc.HeaderText = "Mã nhà cung cấp";
-            this.mancc.Name = "mancc";
-            // 
-            // tenncc
-            // 
-            this.tenncc.DataPropertyName = "tenncc";
-            this.tenncc.HeaderText = "Tên nhà cung cấp";
-            this.tenncc.Name = "tenncc";
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sdt";
-            this.sdt.HeaderText = "Số điện thoại";
-            this.sdt.Name = "sdt";
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "diachi";
-            this.diachi.HeaderText = "Địa chỉ";
-            this.diachi.Name = "diachi";
-            // 
-            // gmail
-            // 
-            this.gmail.DataPropertyName = "gmail";
-            this.gmail.HeaderText = "Gmail";
-            this.gmail.Name = "gmail";
             // 
             // btnGuiMail
             // 

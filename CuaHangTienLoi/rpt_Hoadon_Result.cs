@@ -11,14 +11,12 @@ namespace CuaHangTienLoi
 {
     using System;
     
-    public partial class DANHSACHNV_Result
+    public partial class rpt_Hoadon_Result
     {
-        public int MANV { get; set; }
-        public string TENNV { get; set; }
-        public string GMAIL { get; set; }
-        public string SDT { get; set; }
-        public Nullable<decimal> LUONG { get; set; }
-        public string TENCV { get; set; }
-        public Nullable<int> MATK { get; set; }
+        public int MAHD { get; set; }
+        public string TENHANG { get; set; }
+        public Nullable<int> SLBAN { get; set; }
+        public Nullable<decimal> GIABAN { get; set; }
+        public Nullable<decimal> TONGTIEN { get; set; }
     }
 }

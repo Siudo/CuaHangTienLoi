@@ -11,14 +11,9 @@ namespace CuaHangTienLoi
 {
     using System;
     
-    public partial class DANHSACHNV_Result
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int MANV { get; set; }
-        public string TENNV { get; set; }
-        public string GMAIL { get; set; }
-        public string SDT { get; set; }
-        public Nullable<decimal> LUONG { get; set; }
-        public string TENCV { get; set; }
-        public Nullable<int> MATK { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

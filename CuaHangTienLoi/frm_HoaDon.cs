@@ -20,6 +20,7 @@ namespace CuaHangTienLoi
         {
             using(CUAHANGTIENLOI db = new CUAHANGTIENLOI())
             {
+                
                 var ds_nvbh = from c in db.NHANVIENs
                               where c.MACV == 5
                               select c;
@@ -37,6 +38,7 @@ namespace CuaHangTienLoi
                 {
                     DateTime ngayhd = (DateTime)item.NGAYHD;
                     dt.Rows.Add(item.MAHD, ngayhd.ToString("yyyy-MM-dd"), item.TONGTIEN, item.TENNV, item.MAKH);
+
                 }
                 dgvHoaDon.DataSource = dt;
             }
@@ -100,6 +102,14 @@ namespace CuaHangTienLoi
             themhd.Visible = true;
         }
 
-       
+        private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtTongTien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -438,6 +438,7 @@
             this.Controls.Add(this.txtTenhang);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_NhapHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_NhapHang";
             ((System.ComponentModel.ISupportInitialize)(this.picSP)).EndInit();
             this.ResumeLayout(false);

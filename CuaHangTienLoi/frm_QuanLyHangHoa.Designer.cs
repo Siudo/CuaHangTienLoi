@@ -342,6 +342,8 @@
             // 
             // dgvHangHoa
             // 
+            this.dgvHangHoa.AllowUserToAddRows = false;
+            this.dgvHangHoa.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvHangHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -380,6 +382,7 @@
             this.dgvHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHangHoa.Location = new System.Drawing.Point(0, 321);
             this.dgvHangHoa.Name = "dgvHangHoa";
+            this.dgvHangHoa.ReadOnly = true;
             this.dgvHangHoa.RowHeadersVisible = false;
             this.dgvHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHangHoa.Size = new System.Drawing.Size(1081, 324);
@@ -398,7 +401,7 @@
             this.dgvHangHoa.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvHangHoa.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvHangHoa.ThemeStyle.HeaderStyle.Height = 20;
-            this.dgvHangHoa.ThemeStyle.ReadOnly = false;
+            this.dgvHangHoa.ThemeStyle.ReadOnly = true;
             this.dgvHangHoa.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvHangHoa.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvHangHoa.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -413,48 +416,56 @@
             this.mahang.DataPropertyName = "mahang";
             this.mahang.HeaderText = "Mã hàng";
             this.mahang.Name = "mahang";
+            this.mahang.ReadOnly = true;
             // 
             // tenhang
             // 
             this.tenhang.DataPropertyName = "tenhang";
             this.tenhang.HeaderText = "Tên hàng";
             this.tenhang.Name = "tenhang";
+            this.tenhang.ReadOnly = true;
             // 
             // hsd
             // 
             this.hsd.DataPropertyName = "hsd";
             this.hsd.HeaderText = "Hạn sử dụng";
             this.hsd.Name = "hsd";
+            this.hsd.ReadOnly = true;
             // 
             // donvitinh
             // 
             this.donvitinh.DataPropertyName = "donvitinh";
             this.donvitinh.HeaderText = "Đơn vị tính";
             this.donvitinh.Name = "donvitinh";
+            this.donvitinh.ReadOnly = true;
             // 
             // soluong
             // 
             this.soluong.DataPropertyName = "soluong";
             this.soluong.HeaderText = "Số lượng";
             this.soluong.Name = "soluong";
+            this.soluong.ReadOnly = true;
             // 
             // loaihang
             // 
             this.loaihang.DataPropertyName = "loaihang";
             this.loaihang.HeaderText = "Loại hàng";
             this.loaihang.Name = "loaihang";
+            this.loaihang.ReadOnly = true;
             // 
             // hinh
             // 
             this.hinh.DataPropertyName = "hinh";
             this.hinh.HeaderText = "Hình";
             this.hinh.Name = "hinh";
+            this.hinh.ReadOnly = true;
             // 
             // giaban
             // 
             this.giaban.DataPropertyName = "giaban";
             this.giaban.HeaderText = "Giá bán";
             this.giaban.Name = "giaban";
+            this.giaban.ReadOnly = true;
             // 
             // label7
             // 
