@@ -9,34 +9,34 @@ Lớp: Công nghệ thông tin K58
 - Guna UI
 ## Phần 2: Các chức năng đã hoàn thành
 1.Quản lý nhân viên :
-	- Thông tin nhân viên:
-		-- Thêm , sửa , xoá thông tin nhân viên
-		-- Phân quyền cho nhân viên
-		-- Gửi mail gửi mã xác nhận để đổi password
+	1.1Thông tin nhân viên:
+		1.1.1 Thêm , sửa , xoá thông tin nhân viên
+		1.1.2 Phân quyền cho nhân viên
+		1.1.3 Gửi mail gửi mã xác nhận để đổi password
 2.Quản lý khách hàng:
-	- Thông tin khách hàng:
-		-- Thêm, sửa xoá thông tin khách hàng
-	- Tích điểm mua hàng 
+	2.1 Thông tin khách hàng:
+		2.1.1 Thêm, sửa xoá thông tin khách hàng
+	2.2 Tích điểm mua hàng 
 3.Quản lý hàng hoá : 
-	- Thông tin sản phẩm :
-		-- Thêm, sửa thông tin sản phẩm
-		-- Tìm kiếm sản phẩm
-	- Kiểm tra tình trạng hàng hoá :
-		-- Số lượng nhập – xuất
-		-- Số lượng hàng hết hạn sử dụng 
+	3.1 Thông tin sản phẩm :
+		3.1.1 Thêm, sửa thông tin sản phẩm
+		3.1.2 Tìm kiếm sản phẩm
+	3.2 Kiểm tra tình trạng hàng hoá :
+		3.2.1 Số lượng nhập – xuất
+		3.2.2 Số lượng hàng hết hạn sử dụng 
 4.Thống kê :
-	- Số lượng hàng hoá bán được trong năm.
-	- Tổng tiền đã thu được trong năm
-	- Số lượng hàng hoá hết hạn trước khi bán trong năm
+	4.1 Số lượng hàng hoá bán được trong năm.
+	4.2 Tổng tiền đã thu được trong năm
+	4.3 Số lượng hàng hoá hết hạn trước khi bán trong năm
 5. Quản lý hoá đơn :
-	- Thêm , sửa hoá đơn
-	- Tìm kiếm mã hoá đơn , tên khách hàng , số điện thoại khách hàng
+	5.1 Thêm , sửa hoá đơn
+	5.2 Tìm kiếm mã hoá đơn , tên khách hàng , số điện thoại khách hàng
 	
 6.Report :
-	- Xuất hoá đơn mua hàng
+	6.1 Xuất hoá đơn mua hàng
 7. Quản lý nhà cung cấp:
-	- Thêm , sửa , xoá thông tin nhà cung cấp
-	- Gửi mail liên hệ nhà cung cấp
+	7.1 Thêm , sửa , xoá thông tin nhà cung cấp
+	7.2 Gửi mail liên hệ nhà cung cấp
 ## Phần 3: Các chức năng chưa hoàn thành
 1. Thông báo hàng hết hạn sử dụng
 
