@@ -13,6 +13,7 @@ Lớp: Công nghệ thông tin K58
 	Thông tin nhân viên:
 		Thêm , sửa , xoá thông tin nhân viên
 		Phân quyền cho nhân viên
+		Gửi mail gửi mã xác nhận để đổi password
 2.Quản lý khách hàng:
 	Thông tin khách hàng:
 		Thêm, sửa xoá thông tin khách hàng
@@ -34,7 +35,9 @@ Lớp: Công nghệ thông tin K58
 	
 6.Report :
 	Xuất hoá đơn mua hàng
-
+7. Quản lý nhà cung cấp:
+	Thêm , sửa , xoá thông tin nhà cung cấp
+	Gửi mail liên hệ nhà cung cấp
 ## Phần 3: Các chức năng chưa hoàn thành
 1. Thông báo hàng hết hạn sử dụng
 
